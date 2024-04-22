@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>BD_Tickets</title>
+</head>
+
+<body>
+  <main>
+    <div
+      class="w-full min-h-[50vh] bg-[url(https://bdtickets.com/images/banner/banner-web.png)] bg-cover bg-center bg-no-repeat grid place-content-center">
+
+      <div class="min-w-[500px] ">
+        <div class="w-[80%] min-h-10 bg-white rounded-xl rounded-b-none mx-auto p-4 ">
+          <ul class="flex w-full min-h-6  items-center justify-center rounded-md overflow-hidden">
+            <li
+              class="text-[10px] bg-red-600 border-2 border-red-500 text-white flex items-center gap-2 p-3 px-6 hover:bg-red-200 cursor-pointer">
+              <i class="fa-solid fa-bus"></i>
+              <h3> BUS</h3>
+            </li>
+            <li
+              class="text-[10px] border-2 border-red-500 gap-2 p-3 px-6 flex items-center hover:bg-red-200 cursor-pointer">
+              <i class="fa-solid fa-plane"></i>
+              <h3>AIR</h3>
+            </li>
+            <li
+              class="text-[10px] border-2 border-red-500 gap-2 p-3 px-6 flex items-center hover:bg-red-200 cursor-pointer">
+              <i class="fa-solid fa-ship"></i>
+              <h3>SHEP</h3>
+            </li>
+            <li
+              class="text-[10px] border-2 border-red-500 gap-2 p-3 px-6 flex items-center hover:bg-red-200 cursor-pointer">
+              <i class="fa-solid fa-hotel"></i>
+              <h3>HOTEL</h3>
+            </li>
+          </ul>
+
+        </div>
+        <div class="w-full min-h-40 bg-white rounded-xl p-6">
+          <div class="grid lg:grid-cols-2 gap-2">
+            <!-- Fotm start  -->
+            <div class="w-full min-h-16 border border-red-500 rounded-md grid grid-cols-2">
+
+              <div class="w-full min-h-2 relative border border-red-500 border-t-0 border-l-0 border-b-0">
+                <!-- make a going form valu  -->
+                <div>
+                  <div class="pl-4 text-gray-600 overflow-hidden ">GOING FROM</div>
+                  <div class="pl-4 overflow-hidden">
+                    <input type="text" id="goingFromInput" list="programmingLanguages" placeholder="Search by city"
+                      class="bg-transparent outline-none" />
+                    <datalist id="programmingLanguages">
+                      <option value="Dhaka">Dhaka</option>
+                      <option value="Chittagong">Chittagong</option>
+                      <option value="Barisal">Barisal</option>
+                      <option value="Rajshahi">Rajshahi</option>
+                    </datalist>
+
+                  </div>
+                  <!-- valu end -->
+                  <!-- middle arrow -->
+                </div>
+                <button
+                  class="text-sm text-red-400 w-5 p-2 px-4 min-h-5 grid place-content-center border border-red-500 rounded-full bg-white hover:bg-red-200 absolute top-[25%] -right-[16px]">
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </button>
+              </div>
+
+              <!-- going to form start  -->
+              <div class="w-full min-h-2 pl-4">
+                <div class="pl-4 text-gray-600 overflow-hidden">GOING TO</div>
+                <div class="pl-4 overflow-hidden">
+                  <input type="text" id="goingToInput" list="programmingLanguages" placeholder="Search by city"
+                    class="bg-transparent outline-none" />
+                  <datalist id="programmingLanguages">
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Chittagong">Chittagong</option>
+                    <option value="Barisal">Barisal</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                  </datalist>
+                </div>
+                <!-- going to form end -->
+              </div>
+            </div>
+            <!-- Journy Date -->
+            <div class="w-full min-h-16 border border-red-500 rounded-md grid grid-cols-2">
+
+              <div class="w-full min-h-2 border border-red-500 border-l-0 border-t-0 border-b-0 relative">
+                <!-- Date start  -->
+                <div class="pl-4 text-gray-600 overflow-hidden">JURNEY DATE</div>
+                <div class="pl-4 overflow-hidden">
+                  <input type="date" id="date" name="date"
+                    class="border rounded p-2 bg-transparent outline-none border-hidden" />
+                </div>
+              </div>
+              <!-- date end  -->
+
+              <!-- return date  -->
+              <div class="w-full min-h-2 border border-red-500 border-l-0 border-t-0 border-b-0 relative">
+                <div class="pl-4 text-gray-400 overflow-hidden">RETURN DATE</div>
+                <div class="pl-4 text-gray-400 overflow-hidden">
+                  <input type="date" id="date" name="date"
+                    class="border rounded p-2 bg-transparent outline-none border-hidden" />
+                </div>
+              </div>
+            </div>
+            <!-- return date end  -->
+            <!-- Trending Search -->
+
+            <div class="w-full min-h-5 md:hidden lg:flex gap-2">
+              <div class="lg:flex items-center justify-center">Trending Searches:</div>
+
+              <div class="flex items-center gap-2 flex-wrap">
+                <button class="flex border-2 rounded-lg bg-gray-100 p-1 px-4 justify-center text-sm gap-1 ml-2">
+                  <span>Dhaka</span>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span>Rajshahi</span>
+                </button>
+
+                <button class="flex border-2 rounded-lg bg-gray-100 p-1 px-4 items-center text-sm gap-1">
+                  <span>Dhaka</span>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span>Rajshahi</span>
+                </button>
+
+                <button class="flex border-2 rounded-lg bg-gray-100 p-1 px-4 items-center text-sm gap-1">
+                  <span>Dhaka</span>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span>Barisal</span>
+                </button>
+
+                <button class="flex border-2 rounded-lg bg-gray-100 p-1 px-4 items-center text-sm gap-1">
+                  <span>Dhaka</span>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span>Cox-Bazar</span>
+                </button>
+
+                <button class="flex border-2 rounded-lg bg-gray-100 p-1 px-4 items-center text-sm gap-1">
+                  <span>Dhaka</span>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  <span>Chapai</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Search Button -->
+            <div class="w-full min-h-7 grid place-content-center lg:pr-[100%]">
+              <button
+                class="bg-red-600 text-white py-2 px-10 rounded-md translate-y-10 lg:translate-y-12">SEARCH</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+
+ <!-- Add Swaping Function  -->
+<script>
+let goingFrom = "Dhaka";
+let goingTo = "Rajshahi";
+
+const goingFromInput = document.getElementById("goingFromInput");
+const goingToInput = document.getElementById("goingToInput");
+console.log(goingFromInput);
+
+goingFromInput.value = goingFrom
+goingToInput.value = goingTo
+
+const exChange = (from, to) => {
+  goingFrom = goingto;
+  goingTo = from;
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
